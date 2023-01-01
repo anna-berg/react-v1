@@ -7,12 +7,13 @@ const PostForm = ({create}) => {
     const addNewPost = (e) => {
         e.preventDefault()
         console.log('you are in "Add new post"..');
-        const newPost = {...post, id: Date.now()}
+        const newPost={...post, id: Date.now()}
         create(newPost)
         setPost({title: '', body:''})
     }
     return (
         <form>
+            <h3 style={{textAlign:'center'}}>Create Post</h3>
             <MyInput
                 value={post.title}
                 onChange={e => setPost({...post, title: e.target.value})}
