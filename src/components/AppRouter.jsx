@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Posts from "../pages/Posts";
 import Error from "../pages/Error";
 import PostIdPage from "../pages/PostIdPage";
+import {routs} from "../router/routs";
 
 const AppRouter = () => {
     return (
