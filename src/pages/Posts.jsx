@@ -10,8 +10,8 @@ import PostFilter from "../components/PostFilter";
 import PostList from "../components/PostList";
 import Loader from "../components/UI/loader/Loader";
 import Pagination from "../components/UI/pagination/Pagination";
-// import {useObserver} from "../hooks/useObserver";
 import MySelect from "../components/UI/select/MySelect";
+import {useObserver} from "../hooks/UseObserver";
 
 
 function Posts() {
@@ -31,9 +31,9 @@ function Posts() {
         setTotalPages(getPageCount(totalCount, limit));
     })
 
-/*    useObserver(lastElement, page < totalPages, isPostsLoading, () => {
+    useObserver(lastElement, page < totalPages, isPostsLoading, () => {
         setPage(page + 1);
-    })*/
+    })
 
     useEffect(() => {
         fetchPosts(limit, page)
